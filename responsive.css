@@ -33,7 +33,6 @@
         margin-left: 23px;
     }
 
-   
     .nav-link {
         font-size: 1rem;
         margin: 10px 0;
@@ -73,6 +72,7 @@
 
     #about div {
         font-size: 16px;
+        border: none; /* Removed border from about section div */
     }
 
     .section-skills {
@@ -120,22 +120,19 @@
         align-items: center;
         margin: auto;
     }
+
     .section-skills {
-    padding: 20px 20px;
-    text-align: center;
-    margin: auto;
-    width: 600px;
-    opacity: 0;
-    animation: fadeInUp 1.5s forwards;
-    font-family: "Dancing Script", cursive;
+        padding: 20px 20px;
+        text-align: center;
+        margin: auto;
+        width: 600px;
+        opacity: 0;
+        animation: fadeInUp 1.5s forwards;
+        font-family: "Dancing Script", cursive;
+    }
 }
-}
 
-
-
-     
-  
-    @media (max-width: 400px) {
+@media (max-width: 400px) {
     .navbar {
         padding: 10px 0;
     }
@@ -158,15 +155,6 @@
         font-size: 1rem;
         margin: 8px;
     }
-            .section-skills {
-    padding: 20px 20px;
-    text-align: center;
-    margin: auto;
-    width: auto;
-    opacity: 0;
-    animation: fadeInUp 1.5s forwards;
-    font-family: "Dancing Script", cursive;
-}
 
     .hero h1 {
         font-size: 2rem;
@@ -186,6 +174,7 @@
 
     #about div {
         font-size: 14px;
+        border: none; /* Ensure border is removed on small screens */
     }
 
     /* Adjustments for Skills Section */
@@ -211,11 +200,6 @@
 
     .section-skills {
         padding: 20px;
-    }
-}
-
-
-    #about div {
-        font-size: 14px;
+        width: auto; /* Ensure section fits the screen width */
     }
 }
