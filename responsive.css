@@ -136,6 +136,17 @@
         animation: fadeInUp 1.5s forwards;
         font-family: "Dancing Script", cursive;
     }
+.section-contact {
+    font-size: 1rem !important; /* Font size ko chhota karne ke liye adjust kar diya aur important lagaya */
+}
+
+.section-contact h2 {
+    font-size: 1.75rem !important; /* Heading ka font size ko thoda adjust kiya aur important lagaya */
+}
+
+.contact-links a {
+    font-size: 0.875rem !important; /* Contact links ka font size chhota kiya aur important lagaya */
+}
 
     .navbar-toggle {
         display: block; /* Show toggle button */
