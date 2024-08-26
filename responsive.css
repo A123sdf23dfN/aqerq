@@ -137,7 +137,7 @@
         font-family: "Dancing Script", cursive;
     }
 .section-contact {
-    font-size: 1rem !important; /* Font size ko chhota karne ke liye adjust kar diya aur important lagaya */
+    font-size: 2rem !important; /* Font size ko chhota karne ke liye adjust kar diya aur important lagaya */
 }
 
 .section-contact h2 {
@@ -145,7 +145,7 @@
 }
 
 .contact-links a {
-    font-size: 0.875rem !important; /* Contact links ka font size chhota kiya aur important lagaya */
+    font-size: 1.875rem !important; /* Contact links ka font size chhota kiya aur important lagaya */
 }
 
     .navbar-toggle {
