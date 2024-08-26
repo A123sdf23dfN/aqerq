@@ -136,6 +136,7 @@ canvas {
 
     .right.active {
         display: flex;
+        justify-content:center:
     }
 
     .toggle-btn{
