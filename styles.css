@@ -150,6 +150,15 @@ canvas {
     .toggle-btn{
         display: block;
     }
+    .section-skills {
+    padding: 20px 20px;
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+    font-family: "Dancing Script", cursive;
+
 }
 .hero span {
     font-size: 4.5rem;
