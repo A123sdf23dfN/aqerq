@@ -1,13 +1,13 @@
 /* Base styles for the responsive navbar and hero section */
 @media (max-width: 1325px) {
     .hero {
-        margin-top: 23px; /* Adjusted for spacing */
+        margin-top: 23px;
     }
 }
 
 @media (max-width: 1225px) {
     .border-container-a {
-        background: transparent; /* Transparent background */
+        background: transparent;
     }
 
     .left h1 {
@@ -18,40 +18,40 @@
 
 @media (max-width: 980px) {
     .hero {
-        margin-top: 29px; /* Adjusted for spacing */
+        margin-top: 29px;
     }
 }
 
 @media (max-width: 850px) {
     .navbar {
-        padding: 10px 0; /* Adjusted padding */
+        padding: 10px 0;
     }
 
     .left h1 {
-        font-size: 2.5rem; /* Adjusted font size */
+        font-size: 2.5rem;
         margin-top: 35px;
         margin-left: 23px;
     }
 
     .nav-link {
-        font-size: 1rem; /* Adjusted font size */
+        font-size: 1rem;
         margin: 10px 0;
     }
 
     .hero {
-        margin-top: 34px; /* Adjusted margin */
+        margin-top: 34px;
     }
 
     .hero span {
-        font-size: 2.5rem; /* Adjusted font size */
+        font-size: 2.5rem;
     }
 
     .hero h1 {
-        font-size: 3rem; /* Adjusted font size */
+        font-size: 3rem;
     }
 
     .hero h2 {
-        font-size: 1.5rem; /* Adjusted font size */
+        font-size: 1.5rem;
     }
 
     .border-container-a {
@@ -67,162 +67,138 @@
     }
 
     #about h2 {
-        font-size: 2rem; /* Adjusted font size */
+        font-size: 2rem;
     }
 
     #about div {
         font-size: 16px;
-        border: none; /* Removed border */
+        border: none; /* Removed border from about section div */
     }
 
     .section-skills {
-        width: 100%; /* Full width */
+        width: 100%;
     }
 
     .border-container::after,
     .border-container::before {
-        display: none; /* Hide pseudo-elements */
+        display: none;
     }
 
     .section-title {
-        font-size: 2.5rem; /* Adjusted font size */
+        font-size: 2.5rem;
     }
 
     .skills-container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
+        flex-direction: column;
+        align-items: center;
     }
 
     .skill {
-        width: 100%; /* Full width */
+        width: 100%;
         height: auto;
-        border: 2px solid #ffc600; /* Border color */
+        border: 2px solid #ffc600;
     }
 
     .section-contact {
-        width: 100%; /* Full width */
+        width: 100%;
         padding: 20px;
         margin-top: 20px;
     }
 
     .section-contact h2 {
-        font-size: 2rem; /* Adjusted font size */
+        font-size: 2rem;
     }
 
     .contact-links {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 @media (max-width: 822px) {
     .hero {
-        align-items: center; /* Center items */
-        margin: auto; /* Center horizontally */
+        align-items: center;
+        margin: auto;
     }
 
     .section-skills {
         padding: 20px 20px;
-        text-align: center; /* Center text */
-        margin: auto; /* Center horizontally */
-        width: 100%; /* Full width */
+        text-align: center;
+        margin: auto;
+        width: 100%; /* Make sure the skills section fits the screen width */
         opacity: 0;
-        animation: fadeInUp 1.5s forwards; /* Fade-in animation */
-        font-family: "Dancing Script", cursive; /* Font style */
+        animation: fadeInUp 1.5s forwards;
+        font-family: "Dancing Script", cursive;
     }
 }
 
 @media (max-width: 400px) {
     .navbar {
-        padding: 10px 0; /* Adjusted padding */
+        padding: 10px 0;
     }
 
     .left h1 {
-        font-size: 2rem; /* Adjusted font size */
+        font-size: 2rem;
         margin-left: 15px;
     }
 
     .navbar-toggle {
-        display: block; /* Display toggle button */
-        font-size: 1.5rem; /* Font size */
+        display: block;
+        font-size: 1.5rem;
     }
 
     .right {
-        display: none; /* Hide right section */
+        display: none;
     }
 
     .nav-link {
-        font-size: 1rem; /* Font size */
-        margin: 8px; /* Margin */
+        font-size: 1rem;
+        margin: 8px;
     }
 
     .hero h1 {
-        font-size: 2rem; /* Adjusted font size */
+        font-size: 2rem;
     }
 
     .hero span {
-        font-size: 2rem; /* Adjusted font size */
+        font-size: 2rem;
     }
 
     .hero h2 {
-        font-size: 1.25rem; /* Adjusted font size */
+        font-size: 1.25rem;
     }
 
     #about h2 {
-        font-size: 1.5rem; /* Adjusted font size */
+        font-size: 1.5rem;
     }
 
     #about div {
-        font-size: 14px; /* Adjusted font size */
-        border: none; /* Removed border */
+        font-size: 14px;
+        border: none; /* Ensure border is removed on small screens */
     }
 
+    /* Adjustments for Skills Section */
     .skills-container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
+        flex-direction: column;
+        align-items: center;
     }
 
     .skill {
-        width: 100%; /* Full width */
-        margin-bottom: 15px; /* Margin between skills */
-        padding: 10px; /* Padding */
-        box-sizing: border-box; /* Box sizing */
+        width: 100%; /* Take full width of the container */
+        margin-bottom: 15px; /* Add spacing between skill cards */
+        padding: 10px; /* Add padding for better readability */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
     }
 
     .skill h3 {
-        font-size: 1.25rem; /* Font size */
+        font-size: 1.25rem; /* Adjust skill title size */
     }
 
     .skill p {
-        font-size: 0.875rem; /* Font size */
+        font-size: 0.875rem; /* Adjust skill description size */
     }
 
     .section-skills {
-        padding: 20px; /* Padding */
-        width: 100%; /* Full width */
-    }
-}
-
-/* Responsive styling for toggle button and .right section */
-@media (max-width: 768px) {
-    .right {
-        display: none; /* Hide by default */
-        flex-direction: column; /* Stack items vertically */
-        width: 100%; /* Full width */
-    }
-
-    .right.active {
-        display: flex; /* Show when active */
-    }
-
-    .toggle-btn {
-        display: block; /* Show toggle button */
-        font-size: 1.8rem; /* Font size */
-        background-color: rgba(0, 0, 0, 0.8); /* Background color */
-        color: #fff; /* Text color */
-        border: none; /* Remove border */
-        padding: 10px; /* Padding */
-        cursor: pointer; /* Pointer cursor */
-        margin: 10px; /* Margin */
-    }
-}
+        padding: 20px;
+        width: 100%; /* Ensure section fits the screen width */
+    }}
