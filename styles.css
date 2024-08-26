@@ -52,15 +52,16 @@ canvas {
 
 /* Toggle button (hamburger icon) */
 .toggle-btn {
-    display: none;
+    display: none; /* Initially hidden, shown in smaller screens via media query */
     background: none;
     border: none;
     color: purple;
     font-size: 24px;
     cursor: pointer;
-    float: right;
-        margin-right: -244px;
-    margin-top: -66px;
+    position: absolute; /* Position it relative to the nearest positioned ancestor */
+    top: 15px; /* Adjust the top position */
+    right: 20px; /* Adjust the right position */
+    z-index: 1000; /* Ensure it stays on top */
 }
 
 
