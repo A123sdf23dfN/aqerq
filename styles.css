@@ -13,10 +13,6 @@ body {
 
 }
 
-#scroll-space {
-    height: 2000px;
-    /* Enough space to scroll */
-}
 
 canvas {
     position: fixed;
@@ -59,6 +55,33 @@ canvas {
     color: #b49191;
     font-size: 2rem;
     cursor: pointer;
+}
+.toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+/* Responsive styling for 400px viewport */
+@media (max-width: 400px) {
+    .right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .right.active {
+        display: flex;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
 }
 
 .right {
