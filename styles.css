@@ -144,18 +144,17 @@ canvas {
         justify-content: center; /* Center items horizontally */
     }
 
-    .right {
-        display: flex;
-        justify-content: center;
-        margin-top: 34px;
-        margin-left: -18%;
-    }
-
     .toggle-btn {
         display: block;
         position: absolute;
         top: 15px; /* Adjust to position the toggle button vertically */
         right: 15px; /* Adjust to position the toggle button horizontally */
+        background: none;
+        border: none;
+        color: purple;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure it stays on top of other elements */
     }
 
     .left h1 {
@@ -168,7 +167,7 @@ canvas {
         padding: 20px 20px;
         text-align: center;
         margin: auto;
-        width: 235px !important;
+        width: 254px !important;
         opacity: 0;
         animation: fadeInUp 1.5s forwards;
         font-family: "Dancing Script", cursive;
