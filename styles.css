@@ -65,23 +65,7 @@ canvas {
 
 
 
-/* Responsive styling */
-@media (max-width: 768px) {
-    .right {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .right.active {
-        display: flex;
-    }
-
-    .toggle-btn{
-        display: block;
-    }
-}
-
+/
 .right {
     float: right;
     margin-top: 34px;
