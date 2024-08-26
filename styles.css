@@ -144,7 +144,7 @@ canvas {
     display:flex;
     justify-content:center;
     margin-top: 34px;
-    margin-left:25%;
+            margin-left: -18%;
 }
 
     .toggle-btn{
