@@ -62,9 +62,9 @@
 
     #about {
         padding: 15px;
-        width: 100%;
-        max-width: 90%; /* Limit width for mobile devices */
-        margin: 0 auto; /* Center align */
+        width: 85%; /* Reduced width for mobile devices */
+        max-width: 85%; /* Ensure maximum width is reduced */
+        margin: 0 auto;
         height: auto;
     }
 
@@ -78,7 +78,8 @@
     }
 
     .section-skills {
-        width: 100%;
+        width: 85%; /* Reduced width for skills section */
+        margin: 0 auto; /* Center align the skills section */
     }
 
     .border-container::after,
@@ -102,9 +103,10 @@
     }
 
     .section-contact {
-        width: 100%;
+        width: 85%; /* Reduced width for contact section */
         padding: 20px;
         margin-top: 20px;
+        margin: 0 auto; /* Center align the contact section */
     }
 
     .section-contact h2 {
@@ -127,7 +129,7 @@
         padding: 20px 20px;
         text-align: center;
         margin: auto;
-        width: 100%;
+        width: 85%; /* Reduced width for mobile devices */
         opacity: 0;
         animation: fadeInUp 1.5s forwards;
         font-family: "Dancing Script", cursive;
@@ -177,8 +179,8 @@
 
     #about {
         padding: 10px 5px; 
-        width: 100%;
-        max-width: 100%; /* Ensure full width for small screens */
+        width: 90%; /* Further reduced width for small screens */
+        max-width: 90%;
         margin: 0 auto;
         height: auto;
     }
@@ -214,7 +216,8 @@
 
     .section-skills {
         padding: 20px;
-        width: 100%; 
+        width: 90%; /* Further reduced width for skills section */
+        margin: 0 auto;
     }
 }
 
