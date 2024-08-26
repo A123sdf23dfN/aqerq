@@ -72,7 +72,7 @@
 
     #about div {
         font-size: 16px;
-        border: none; /* Removed border from about section div */
+        border: none;
     }
 
     .section-skills {
@@ -159,39 +159,44 @@
         font-size: 1.25rem;
     }
 
+    #about {
+        padding: 10px 5px; /* Reduced padding for smaller screens */
+        width: 100%;
+        height: auto;
+    }
+
     #about h2 {
         font-size: 1.5rem;
     }
 
     #about div {
         font-size: 14px;
-        border: none; /* Ensure border is removed on small screens */
+        border: none;
     }
 
-    /* Adjustments for Skills Section */
     .skills-container {
         flex-direction: column;
         align-items: center;
     }
 
     .skill {
-        width: 100%; /* Take full width of the container */
-        margin-bottom: 15px; /* Add spacing between skill cards */
-        padding: 10px; /* Add padding for better readability */
-        box-sizing: border-box; /* Ensure padding doesn't affect width */
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     .skill h3 {
-        font-size: 1.25rem; /* Adjust skill title size */
+        font-size: 1.25rem;
     }
 
     .skill p {
-        font-size: 0.875rem; /* Adjust skill description size */
+        font-size: 0.875rem;
     }
 
     .section-skills {
         padding: 20px;
-        width: 100%; /* Ensure section fits the screen width */
+        width: 100%;
     }
 }
 
@@ -200,7 +205,7 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Remove toggle button and related styles */
+/* Navbar adjustments */
 .navbar-toggle {
     display: none; /* Hide the toggle button */
 }
@@ -211,6 +216,6 @@ body {
 }
 
 .right.active {
-    display: flex; /* Keep display flex for active state */
-    justify-content: center; /* Center items horizontally */
+    display: flex;
+    justify-content: center;
 }
