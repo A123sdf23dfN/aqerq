@@ -142,15 +142,6 @@
         margin-left: 15px;
     }
 
-    .navbar-toggle {
-        display: block;
-        font-size: 1.5rem;
-    }
-
-    .right {
-        display: none;
-    }
-
     .nav-link {
         font-size: 1rem;
         margin: 8px;
@@ -209,27 +200,5 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Responsive styling for toggle button and .right section */
-@media (max-width: 768px) {
-    .right {
-        display: none; /* Hide by default */
-        flex-direction: column; /* Stack items vertically */
-        width: 100%; /* Full width */
-    }
+/* Remove toggle button and related styles */
 
-    .right.active {
-        display: flex; /* Show when active */
-        justify-content: center; /* Center items horizontally */
-    }
-
-    .toggle-btn {
-        display: block; /* Show toggle button */
-        font-size: 1.8rem; /* Font size */
-        background-color: rgba(0, 0, 0, 0.8); /* Background color */
-        color: #fff; /* Text color */
-        border: none; /* Remove border */
-        padding: 10px; /* Padding */
-        cursor: pointer; /* Pointer cursor */
-        margin: 10px; /* Margin */
-    }
-}
