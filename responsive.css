@@ -131,47 +131,10 @@
 }
 }
 
-@media (max-width: 400px) {
-    .navbar {
-        padding: 10px 0;
-    }
 
-    .left h1 {
-        font-size: 2rem;
-        margin-left: 15px;
-    }
 
-    .navbar-toggle {
-        display: block;
-        font-size: 1.5rem;
-    }
-
-    .right {
-        display: none;
-        /* Hide the right side links for very small screens */
-    }
-
-    .nav-link {
-        font-size: 1rem;
-        margin: 8px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero span {
-        font-size: 2rem;
-    }
-
-    .hero h2 {
-        font-size: 1.25rem;
-    }
-
-    #about h2 {
-        font-size: 1.5rem;
-    }
-    
+     
+  
     @media (max-width: 400px) {
     .navbar {
         padding: 10px 0;
