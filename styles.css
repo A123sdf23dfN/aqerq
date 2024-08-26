@@ -133,7 +133,9 @@ canvas {
         flex-direction: column;
         width: 100%;
     }
-
+.nav-link{
+    justify-content:center;
+}
   .right.active {
     display: flex;
     justify-content: center; /* Center items horizontally */
