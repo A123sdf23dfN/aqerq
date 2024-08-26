@@ -138,7 +138,11 @@ canvas {
     display: flex;
     justify-content: center; /* Center items horizontally */
 }
-
+.right {
+    display:flex;
+    justify-content:center;
+    margin-top: 34px;
+}
 
     .toggle-btn{
         display: block;
