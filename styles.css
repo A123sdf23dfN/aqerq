@@ -23,7 +23,6 @@ canvas {
 }
 
 /* Navbar */
-/* Navbar */
 .navbar {
     padding: 0px 0;
     font-family: "Edu VIC WA NT Beginner", cursive;
@@ -32,7 +31,7 @@ canvas {
     top: 0;
     left: 0;
     display: flex;
-    justify-content: space-between; /* Ensure space between left and right */
+    justify-content: center;
     align-items: center;
     z-index: 1000;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -49,6 +48,8 @@ canvas {
     float: left;
 }
 
+
+
 /* Toggle button (hamburger icon) */
 .toggle-btn {
     display: none; /* Initially hidden, shown in smaller screens via media query */
@@ -63,19 +64,85 @@ canvas {
     z-index: 1000; /* Ensure it stays on top */
 }
 
+
+
+
 .right {
     float: right;
     margin-top: 34px;
-    display: flex; /* Ensure it is displayed as flex */
 }
 
-/* Media Query for Smaller Screens */
+.left h1 {
+    font-size: 3.5rem;
+    margin-top: 16px;
+    background: linear-gradient(145deg, skyblue, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.nav-link {
+    color: #ffc600;
+    text-decoration: none;
+    margin: 20px 20px;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease, text-decoration 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff00b7;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: #ff4500;
+    transform: scale(1.1);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffadad;
+    background-attachment: fixed;
+    padding: 0 20px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
 @media (max-width: 768px) {
     .right {
-        display: none; /* Hide on smaller screens */
+        display: none;
         flex-direction: column;
-        width: 100%; /* Make sure it takes full width */
-        margin-right: 46px !important; /* Adjust margin as needed */
+        width: 100%;
+        margin-right:46px !important;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    .right.active {
+        display: flex;
+        justify-content: center; /* Center items horizontally */
     }
 
     .toggle-btn {
@@ -105,11 +172,6 @@ canvas {
         opacity: 0;
         animation: fadeInUp 1.5s forwards;
         font-family: "Dancing Script", cursive;
-    }
-
-    .right.active {
-        display: flex; /* Show on toggle */
-        justify-content: center; /* Center items horizontally */
     }
 }
 
@@ -310,5 +372,4 @@ footer p {
 }
 
 span {
-    margin-left: 14px;
-}
+    margin-left: 14px;}
