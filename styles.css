@@ -154,7 +154,7 @@ canvas {
     padding: 20px 20px;
     text-align: center;
     margin: auto;
-    width: 500px !important;
+    width: 295px !important;
     opacity: 0;
     animation: fadeInUp 1.5s forwards;
     font-family: "Dancing Script", cursive;
