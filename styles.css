@@ -48,14 +48,7 @@ canvas {
     float: left;
 }
 
-.navbar-toggle {
-    display: none;
-    background-color: transparent;
-    border: none;
-    color: #b49191;
-    font-size: 2rem;
-    cursor: pointer;
-}
+
 .toggle-btn {
     display: none;
     background: none;
@@ -67,15 +60,21 @@ canvas {
         margin-right: -244px;
     margin-top: -66px;
 }
+/* Toggle button (hamburger icon) */
+.navbar-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #b49191;
+    font-size: 2rem;
+    cursor: pointer;
+}
 
-
-
-/* Responsive styling for 400px viewport */
-@media (max-width: 400px) {
+/* Responsive styling */
+@media (max-width: 768px) {
     .right {
         display: none;
         flex-direction: column;
-        margin:auto;
         width: 100%;
     }
 
@@ -83,9 +82,8 @@ canvas {
         display: flex;
     }
 
-    .toggle-btn {
+    .navbar-toggle {
         display: block;
-        marjin
     }
 }
 
