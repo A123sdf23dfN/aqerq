@@ -8,11 +8,9 @@ body {
 }
 
 * {
-
+    box-sizing: border-box;
     font-family: "Dancing Script", cursive;
-
 }
-
 
 canvas {
     position: fixed;
@@ -24,7 +22,7 @@ canvas {
 
 /* Navbar */
 .navbar {
-    padding: 0px 0;
+    padding: 0;
     font-family: "Edu VIC WA NT Beginner", cursive;
     position: fixed;
     width: 100%;
@@ -35,6 +33,7 @@ canvas {
     align-items: center;
     z-index: 1000;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(0, 0, 0, 0.8); /* Adjust background color */
 }
 
 .navbar nav {
@@ -44,37 +43,14 @@ canvas {
     max-width: 1200px;
 }
 
-.left {
-    float: left;
-}
-
-
-
-/* Toggle button (hamburger icon) */
-.toggle-btn {
-    display: none; /* Initially hidden, shown in smaller screens via media query */
-    background: none;
-    border: none;
-    color: purple;
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute; /* Position it relative to the nearest positioned ancestor */
-    top: 46px; /* Adjust the top position */
-    right: 20px; /* Adjust the right position */
-    z-index: 1000; /* Ensure it stays on top */
-}
-
-
-
-
-.right {
-    float: right;
-    margin-top: 34px;
+.left, .right {
+    display: flex;
+    align-items: center;
 }
 
 .left h1 {
     font-size: 3.5rem;
-    margin-top: 16px;
+    margin: 16px 20px 16px 0;
     background: linear-gradient(145deg, skyblue, blue);
     -webkit-background-clip: text;
     color: transparent;
@@ -84,12 +60,13 @@ canvas {
 .nav-link {
     color: #ffc600;
     text-decoration: none;
-    margin: 20px 20px;
+    margin: 20px;
     font-family: "Edu VIC WA NT Beginner", cursive;
     font-size: 1.2rem;
     font-weight: bold;
     transition: color 0.3s ease, transform 0.3s ease, text-decoration 0.3s ease;
     position: relative;
+    padding: 10px; /* Ensure links are clickable */
 }
 
 .nav-link::after {
@@ -114,6 +91,54 @@ canvas {
     width: 100%;
 }
 
+/* Toggle button (hamburger icon) */
+.toggle-btn {
+    display: none; /* Initially hidden, shown in smaller screens via media query */
+    background: none;
+    border: none;
+    color: purple;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 46px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .right.active {
+        display: flex;
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .toggle-btn {
+        display: block;
+        top: 45px;
+        right: 15px;
+    }
+
+    .left h1 {
+        font-size: 2rem;
+        margin: 15px 20px;
+    }
+
+    .section-skills {
+        padding: 20px;
+        text-align: center;
+        width: 254px;
+        opacity: 0;
+        animation: fadeInUp 1.5s forwards;
+    }
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -127,52 +152,6 @@ canvas {
     padding: 0 20px;
     opacity: 0;
     animation: fadeIn 3s forwards;
-}
-@media (max-width: 768px) {
-    .right {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-right:46px !important;
-    }
-
-    .nav-link {
-        justify-content: center;
-    }
-
-    .right.active {
-        display: flex;
-        justify-content: center; /* Center items horizontally */
-    }
-
-    .toggle-btn {
-        display: block;
-        position: absolute;
-        top: 45px; /* Adjust to position the toggle button vertically */
-        right: 15px; /* Adjust to position the toggle button horizontally */
-        background: none;
-        border: none;
-        color: purple;
-        font-size: 24px;
-        cursor: pointer;
-        z-index: 1000; /* Ensure it stays on top of other elements */
-    }
-
-    .left h1 {
-        font-size: 2rem; /* Adjust the font size as needed */
-        margin-top: 15px; /* Adjust the top margin to align the h1 element */
-        margin-left: 20px; /* Adjust the left margin to align the h1 element */
-    }
-
-    .section-skills {
-        padding: 20px 20px;
-        text-align: center;
-        margin: auto;
-        width: 254px !important;
-        opacity: 0;
-        animation: fadeInUp 1.5s forwards;
-        font-family: "Dancing Script", cursive;
-    }
 }
 
 .hero span {
@@ -204,59 +183,28 @@ canvas {
     animation: typing 4s steps(30, end) infinite, blink 0.75s step-end infinite;
 }
 
-/* Keyframes for Typing Effect */
+/* Keyframes */
 @keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 28%;
-    }
+    from { width: 0; }
+    to { width: 28%; }
 }
 
-/* Keyframes for Blink Effect */
 @keyframes blink {
-    0% {
-        border-color: transparent;
-    }
-
-    50% {
-        border-color: #ffc600;
-    }
-
-    100% {
-        border-color: transparent;
-    }
+    0% { border-color: transparent; }
+    50% { border-color: #ffc600; }
+    100% { border-color: transparent; }
 }
 
-/* Keyframes for Fade In */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-100px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Keyframes for Fade In Up */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* About Section */
 /* About Section */
 .border-container-a {
     background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
@@ -274,19 +222,12 @@ canvas {
     width: 95%;
     height: 92%;
     position: relative;
-    /* Required for positioning the pseudo-elements */
     color: #00ff75;
-    /* Black background for the #about section */
     padding: 20px;
-    /* Add some padding to prevent text from touching the border */
-    border-radius: 10px;
+    border-radius: 20px;
     margin: auto;
     background-color: #000;
     transition: all 0.2s;
-    border-radius: 20px;
-    /* Rounded corners */
-
-    /* To prevent pseudo-element overflow */
 }
 
 #about h2 {
@@ -303,15 +244,12 @@ canvas {
     font-size: 18px;
 }
 
-
-
 /* Contact Section */
 .section-contact {
-    padding: 10px 10px;
-    margin-top: 20px;
+    padding: 10px;
+    margin-top: 134px;
     text-align: center;
     margin: auto;
-    margin-top: 134px;
     width: 600px;
     opacity: 0;
     animation: fadeInUp 1.5s forwards;
@@ -319,7 +257,7 @@ canvas {
     font-family: "Oswald", sans-serif;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    background: transparent;
+    background: rgba(0, 0, 0, 0.8); /* Adjust background color */
     color: #ffffff;
 }
 
@@ -352,11 +290,6 @@ canvas {
     transform: scale(1.15);
 }
 
-/* Optional: Adding subtle transition to the section */
-.section-contact {
-    transition: background 0.5s ease, box-shadow 0.5s ease;
-}
-
 /* Footer */
 footer {
     padding: 20px 0;
@@ -373,4 +306,4 @@ footer p {
 
 span {
     margin-left: 14px;
-} 
+}
