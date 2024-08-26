@@ -166,6 +166,76 @@
     #about h2 {
         font-size: 1.5rem;
     }
+    @media (max-width: 400px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .left h1 {
+        font-size: 2rem;
+        margin-left: 15px;
+    }
+
+    .navbar-toggle {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        margin: 8px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero span {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.25rem;
+    }
+
+    #about h2 {
+        font-size: 1.5rem;
+    }
+
+    #about div {
+        font-size: 14px;
+    }
+
+    /* Adjustments for Skills Section */
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 100%; /* Take full width of the container */
+        margin-bottom: 15px; /* Add spacing between skill cards */
+        padding: 10px; /* Add padding for better readability */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+    }
+
+    .skill h3 {
+        font-size: 1.25rem; /* Adjust skill title size */
+    }
+
+    .skill p {
+        font-size: 0.875rem; /* Adjust skill description size */
+    }
+
+    .section-skills {
+        padding: 20px;
+    }
+}
+
 
     #about div {
         font-size: 14px;
