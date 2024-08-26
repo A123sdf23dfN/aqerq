@@ -201,4 +201,16 @@ body {
 }
 
 /* Remove toggle button and related styles */
+.navbar-toggle {
+    display: none; /* Hide the toggle button */
+}
 
+.right {
+    display: flex; /* Ensure right section is always visible */
+    flex-direction: row; /* Align items horizontally */
+}
+
+.right.active {
+    display: flex; /* Keep display flex for active state */
+    justify-content: center; /* Center items horizontally */
+}
