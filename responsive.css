@@ -106,6 +106,7 @@
         width: 85%; /* Reduced width for contact section */
         padding: 20px;
         margin-top: 20px;
+        font-size:24px;
         margin: 0 auto; /* Center align the contact section */
     }
 
