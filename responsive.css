@@ -1,60 +1,57 @@
 /* Base styles for the responsive navbar and hero section */
 @media (max-width: 1325px) {
     .hero {
-        margin-top: 20px; /* Adjusted for better spacing */
+        margin-top: 23px; /* Adjusted for spacing */
     }
 }
 
 @media (max-width: 1225px) {
     .border-container-a {
-        background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.2); /* Add subtle border for contrast */
+        background: transparent; /* Transparent background */
     }
 
     .left h1 {
-        margin-top: 5px;
-        margin-left: 15px;
-        font-size: 2.2rem; /* Adjusted for better readability */
+        margin-top: 3px;
+        margin-left: 13px;
     }
 }
 
 @media (max-width: 980px) {
     .hero {
-        margin-top: 25px; /* Adjusted for spacing consistency */
+        margin-top: 29px; /* Adjusted for spacing */
     }
 }
 
 @media (max-width: 850px) {
     .navbar {
-        padding: 15px 0; /* Increased padding for a balanced look */
-        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 10px 0; /* Adjusted padding */
     }
 
     .left h1 {
-        font-size: 2.8rem; /* Slightly larger for better readability */
-        margin-top: 30px;
-        margin-left: 20px;
+        font-size: 2.5rem; /* Adjusted font size */
+        margin-top: 35px;
+        margin-left: 23px;
     }
 
     .nav-link {
-        font-size: 1.1rem; /* Slightly larger font size */
-        margin: 8px 0; /* Adjusted spacing */
+        font-size: 1rem; /* Adjusted font size */
+        margin: 10px 0;
     }
 
     .hero {
-        margin-top: 40px;
+        margin-top: 34px; /* Adjusted margin */
     }
 
     .hero span {
-        font-size: 2.8rem; /* Adjusted for consistency */
+        font-size: 2.5rem; /* Adjusted font size */
     }
 
     .hero h1 {
-        font-size: 3.2rem; /* Adjusted for emphasis */
+        font-size: 3rem; /* Adjusted font size */
     }
 
     .hero h2 {
-        font-size: 1.8rem; /* Adjusted for hierarchy */
+        font-size: 1.5rem; /* Adjusted font size */
     }
 
     .border-container-a {
@@ -64,171 +61,168 @@
     }
 
     #about {
-        padding: 20px;
+        padding: 15px;
         width: 100%;
         height: auto;
     }
 
     #about h2 {
-        font-size: 2.2rem; /* Slightly larger font size */
+        font-size: 2rem; /* Adjusted font size */
     }
 
     #about div {
-        font-size: 18px;
-        border: none; /* Removed border for clean look */
+        font-size: 16px;
+        border: none; /* Removed border */
     }
 
     .section-skills {
-        width: 100%;
-        padding: 20px;
+        width: 100%; /* Full width */
     }
 
     .border-container::after,
     .border-container::before {
-        display: none;
+        display: none; /* Hide pseudo-elements */
     }
 
     .section-title {
-        font-size: 2.8rem; /* Adjusted for prominence */
+        font-size: 2.5rem; /* Adjusted font size */
     }
 
     .skills-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
     }
 
     .skill {
-        width: 90%; /* Slightly smaller width for spacing */
+        width: 100%; /* Full width */
         height: auto;
-        border: 2px solid #ffc600;
-        margin-bottom: 15px; /* Spacing between skill cards */
-        padding: 15px; /* Added padding */
+        border: 2px solid #ffc600; /* Border color */
     }
 
     .section-contact {
-        width: 100%;
-        padding: 25px;
-        margin-top: 25px;
+        width: 100%; /* Full width */
+        padding: 20px;
+        margin-top: 20px;
     }
 
     .section-contact h2 {
-        font-size: 2.2rem; /* Larger font size for contact section */
+        font-size: 2rem; /* Adjusted font size */
     }
 
     .contact-links {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
     }
 }
 
 @media (max-width: 822px) {
     .hero {
-        align-items: center;
-        margin: 20px auto; /* Centered and adjusted margin */
+        align-items: center; /* Center items */
+        margin: auto; /* Center horizontally */
     }
 
     .section-skills {
-        padding: 25px;
-        text-align: center;
-        width: 100%;
+        padding: 20px 20px;
+        text-align: center; /* Center text */
+        margin: auto; /* Center horizontally */
+        width: 100%; /* Full width */
         opacity: 0;
-        animation: fadeInUp 1.5s forwards;
-        font-family: "Dancing Script", cursive;
+        animation: fadeInUp 1.5s forwards; /* Fade-in animation */
+        font-family: "Dancing Script", cursive; /* Font style */
     }
 }
 
 @media (max-width: 400px) {
     .navbar {
-        padding: 12px 0;
-        background-color: rgba(0, 0, 0, 0.8); /* Darker background for visibility */
+        padding: 10px 0; /* Adjusted padding */
     }
 
     .left h1 {
-        font-size: 1.8rem;
-        margin-left: 10px; /* Adjusted for tight spaces */
+        font-size: 2rem; /* Adjusted font size */
+        margin-left: 15px;
     }
 
     .navbar-toggle {
-        display: block;
-        font-size: 1.8rem; /* Slightly larger toggle button */
+        display: block; /* Display toggle button */
+        font-size: 1.5rem; /* Font size */
     }
 
     .right {
-        display: none;
+        display: none; /* Hide right section */
     }
 
     .nav-link {
-        font-size: 1rem;
-        margin: 8px;
+        font-size: 1rem; /* Font size */
+        margin: 8px; /* Margin */
     }
 
     .hero h1 {
-        font-size: 1.8rem; /* Smaller for compact screens */
+        font-size: 2rem; /* Adjusted font size */
     }
 
     .hero span {
-        font-size: 1.8rem;
+        font-size: 2rem; /* Adjusted font size */
     }
 
     .hero h2 {
-        font-size: 1.2rem; /* Adjusted for readability */
+        font-size: 1.25rem; /* Adjusted font size */
     }
 
     #about h2 {
-        font-size: 1.6rem; /* Slightly larger font size */
+        font-size: 1.5rem; /* Adjusted font size */
     }
 
     #about div {
-        font-size: 14px;
-        border: none; /* Ensured border is removed */
+        font-size: 14px; /* Adjusted font size */
+        border: none; /* Removed border */
     }
 
     .skills-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
     }
 
     .skill {
-        width: 100%;
-        margin-bottom: 15px;
-        padding: 10px;
-        box-sizing: border-box;
+        width: 100%; /* Full width */
+        margin-bottom: 15px; /* Margin between skills */
+        padding: 10px; /* Padding */
+        box-sizing: border-box; /* Box sizing */
     }
 
     .skill h3 {
-        font-size: 1.2rem; /* Adjusted title size */
+        font-size: 1.25rem; /* Font size */
     }
 
     .skill p {
-        font-size: 0.875rem; /* Adjusted description size */
+        font-size: 0.875rem; /* Font size */
     }
 
     .section-skills {
-        padding: 20px;
-        width: 100%;
+        padding: 20px; /* Padding */
+        width: 100%; /* Full width */
     }
 }
 
-/* Responsive styling */
+/* Responsive styling for toggle button and .right section */
 @media (max-width: 768px) {
     .right {
-        display: none; /* Hidden by default on small screens */
-        flex-direction: column; /* Stack items vertically when visible */
-        width: 100%; /* Full width for the container */
+        display: none; /* Hide by default */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width */
     }
 
     .right.active {
-        display: flex; /* Show the element when it has the 'active' class */
+        display: flex; /* Show when active */
     }
 
     .toggle-btn {
-        display: block; /* Ensure the toggle button is visible */
-        font-size: 1.8rem; /* Larger button size for easier interaction */
-        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for visibility */
-        color: #fff; /* White text color */
-        border: none; /* Remove default border */
-        padding: 10px; /* Add padding for better appearance */
-        cursor: pointer; /* Pointer cursor for clickable elements */
-        margin: 10px; /* Margin around the button */
+        display: block; /* Show toggle button */
+        font-size: 1.8rem; /* Font size */
+        background-color: rgba(0, 0, 0, 0.8); /* Background color */
+        color: #fff; /* Text color */
+        border: none; /* Remove border */
+        padding: 10px; /* Padding */
+        cursor: pointer; /* Pointer cursor */
+        margin: 10px; /* Margin */
     }
 }
