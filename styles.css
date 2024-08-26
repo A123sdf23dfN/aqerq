@@ -148,7 +148,7 @@ canvas {
     .toggle-btn {
         display: block;
         position: absolute;
-        top: 15px; /* Adjust to position the toggle button vertically */
+        top: 45px; /* Adjust to position the toggle button vertically */
         right: 15px; /* Adjust to position the toggle button horizontally */
         background: none;
         border: none;
