@@ -134,10 +134,11 @@ canvas {
         width: 100%;
     }
 
-    .right.active {
-        display: flex;
-        justify-content:center:
-    }
+  .right.active {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+}
+
 
     .toggle-btn{
         display: block;
