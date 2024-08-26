@@ -133,33 +133,47 @@ canvas {
         flex-direction: column;
         width: 100%;
     }
-.nav-link{
-    justify-content:center;
-}
-  .right.active {
-    display: flex;
-    justify-content: center; /* Center items horizontally */
-}
-.right {
-    display:flex;
-    justify-content:center;
-    margin-top: 34px;
-            margin-left: -18%;
-}
 
-    .toggle-btn{
-        display: block;
+    .nav-link {
+        justify-content: center;
     }
-    .section-skills {
-    padding: 20px 20px;
-    text-align: center;
-    margin: auto;
-    width: 295px !important;
-    opacity: 0;
-    animation: fadeInUp 1.5s forwards;
-    font-family: "Dancing Script", cursive;
 
-}}
+    .right.active {
+        display: flex;
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .right {
+        display: flex;
+        justify-content: center;
+        margin-top: 34px;
+        margin-left: -18%;
+    }
+
+    .toggle-btn {
+        display: block;
+        position: absolute;
+        top: 15px; /* Adjust to position the toggle button vertically */
+        right: 15px; /* Adjust to position the toggle button horizontally */
+    }
+
+    .left h1 {
+        font-size: 2rem; /* Adjust the font size as needed */
+        margin-top: 15px; /* Adjust the top margin to align the h1 element */
+        margin-left: 20px; /* Adjust the left margin to align the h1 element */
+    }
+
+    .section-skills {
+        padding: 20px 20px;
+        text-align: center;
+        margin: auto;
+        width: 295px !important;
+        opacity: 0;
+        animation: fadeInUp 1.5s forwards;
+        font-family: "Dancing Script", cursive;
+    }
+}
+
 .hero span {
     font-size: 4.5rem;
     margin: 0;
