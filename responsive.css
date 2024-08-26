@@ -63,6 +63,8 @@
     #about {
         padding: 15px;
         width: 100%;
+        max-width: 90%; /* Limit width for mobile devices */
+        margin: 0 auto; /* Center align */
         height: auto;
     }
 
@@ -125,10 +127,24 @@
         padding: 20px 20px;
         text-align: center;
         margin: auto;
-        width: 100%; /* Make sure the skills section fits the screen width */
+        width: 100%;
         opacity: 0;
         animation: fadeInUp 1.5s forwards;
         font-family: "Dancing Script", cursive;
+    }
+
+    .navbar-toggle {
+        display: block; /* Show toggle button */
+    }
+
+    .right {
+        display: none; /* Hide navbar links */
+    }
+
+    .right.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -160,8 +176,10 @@
     }
 
     #about {
-        padding: 10px 5px; /* Reduced padding for smaller screens */
+        padding: 10px 5px; 
         width: 100%;
+        max-width: 100%; /* Ensure full width for small screens */
+        margin: 0 auto;
         height: auto;
     }
 
@@ -180,7 +198,7 @@
     }
 
     .skill {
-        width: 100%;
+        width: 100%; 
         margin-bottom: 15px;
         padding: 10px;
         box-sizing: border-box;
@@ -196,7 +214,7 @@
 
     .section-skills {
         padding: 20px;
-        width: 100%;
+        width: 100%; 
     }
 }
 
@@ -207,15 +225,15 @@ body {
 
 /* Navbar adjustments */
 .navbar-toggle {
-    display: none; /* Hide the toggle button */
+    display: block; /* Ensure toggle button is visible on small screens */
 }
 
 .right {
-    display: flex; /* Ensure right section is always visible */
-    flex-direction: row; /* Align items horizontally */
+    display: none; /* Hide navbar links by default on small screens */
 }
 
 .right.active {
-    display: flex;
-    justify-content: center;
+    display: flex; /* Show navbar links when toggle is active */
+    flex-direction: column;
+    align-items: center;
 }
