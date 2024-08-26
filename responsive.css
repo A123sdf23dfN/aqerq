@@ -125,7 +125,7 @@
         padding: 20px 20px;
         text-align: center;
         margin: auto;
-        width: 600px;
+        width: 100%; /* Make sure the skills section fits the screen width */
         opacity: 0;
         animation: fadeInUp 1.5s forwards;
         font-family: "Dancing Script", cursive;
@@ -200,6 +200,6 @@
 
     .section-skills {
         padding: 20px;
-        width: auto; /* Ensure section fits the screen width */
+        width: 100%; /* Ensure section fits the screen width */
     }
 }
