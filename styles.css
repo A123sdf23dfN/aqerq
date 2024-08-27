@@ -1,388 +1,387 @@
- body {
-     margin: 0;
-     background: #000;
-     color: #f0f8ff;
-     font-family: "Dancing Script", cursive;
-     overflow-x: hidden;
- }
+body {
+    margin: 0;
+    background: #000;
+    color: #f0f8ff;
+    font-family: "Dancing Script", cursive;
+    overflow-x: hidden;
+}
 
- * {
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+}
 
-     font-family: "Dancing Script", cursive;
+/* Navbar */
+.navbar {
+    padding: 0;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
- }
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
 
+.left {
+    float: left;
+}
 
- canvas {
-     position: fixed;
-     top: 0;
-     left: 0;
-     z-index: -1;
-     pointer-events: none;
- }
+.right {
+    float: right;
+    margin-top: 54px;
+}
 
- /* Navbar */
- .navbar {
-     padding: 0px 0;
-     font-family: "Edu VIC WA NT Beginner", cursive;
-     position: fixed;
-     width: 100%;
-     top: 0;
-     left: 0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     z-index: 1000;
-     transition: background-color 0.3s ease, box-shadow 0.3s ease;
- }
+/* Toggle button (hamburger icon) */
+.toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: purple;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 46px;
+    right: 20px;
+    z-index: 1000;
+}
 
- .navbar nav {
-     display: flex;
-     justify-content: space-between;
-     width: 100%;
-     max-width: 1200px;
- }
+.left h1 {
+    font-size: 3.5rem;
+    margin-top: 16px;
+    background: linear-gradient(145deg, skyblue, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
- .left {
-     float: left;
- }
+.nav-link {
+    color: #ffc600;
+    text-decoration: none;
+    margin: 20px 20px;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease, text-decoration 0.3s ease;
+    position: relative;
+}
 
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff00b7;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+.nav-link:hover {
+    color: #ff4500;
+    transform: scale(1.1);
+}
 
- /* Toggle button (hamburger icon) */
- .toggle-btn {
-     display: none;
-     /* Initially hidden, shown in smaller screens via media query */
-     background: none;
-     border: none;
-     color: purple;
-     font-size: 24px;
-     cursor: pointer;
-     position: absolute;
-     /* Position it relative to the nearest positioned ancestor */
-     top: 46px;
-     /* Adjust the top position */
-     right: 20px;
-     /* Adjust the right position */
-     z-index: 1000;
-     /* Ensure it stays on top */
- }
+.nav-link:hover::after {
+    width: 100%;
+}
 
+.toggle-btn .fa-times {
+    color: red;
+}
 
+.toggle-btn .fa-bars {
+    color: purple;
+}
 
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffadad;
+    background-attachment: fixed;
+    padding: 0 20px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
 
- .right {
-     float: right;
-     margin-top: 54px;
- }
+.hero span {
+    font-size: 4.5rem;
+    margin: 0;
+    background: linear-gradient(145deg, blue, rgba(173, 216, 230, 0.8), purple, #ff00b7);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
- .left h1 {
-     font-size: 3.5rem;
-     margin-top: 16px;
-     background: linear-gradient(145deg, skyblue, blue);
-     -webkit-background-clip: text;
-     color: transparent;
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
- }
+.hero h1 {
+    font-size: 4.5rem;
+    margin: 0;
+    background: linear-gradient(145deg, skyblue, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
- .nav-link {
-     color: #ffc600;
-     text-decoration: none;
-     margin: 20px 20px;
-     font-family: "Edu VIC WA NT Beginner", cursive;
-     font-size: 1.2rem;
-     font-weight: bold;
-     transition: color 0.3s ease, transform 0.3s ease, text-decoration 0.3s ease;
-     position: relative;
- }
+.hero h2 {
+    font-size: 2.5rem;
+    margin: 20px 0 0;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    white-space: nowrap;
+    color: #ffc600;
+    overflow: hidden;
+    border-right: 3px solid #ffc600;
+    width: 0;
+    animation: typing 4s steps(30, end) infinite, blink 0.75s step-end infinite;
+}
 
- .nav-link::after {
-     content: '';
-     display: block;
-     width: 0;
-     height: 2px;
-     background: #ff00b7;
-     transition: width 0.3s;
-     position: absolute;
-     bottom: -5px;
-     left: 50%;
-     transform: translateX(-50%);
- }
+@keyframes typing {
+    from {
+        width: 0;
+    }
 
- .nav-link:hover {
-     color: #ff4500;
-     transform: scale(1.1);
- }
+    to {
+        width: 28%;
+    }
+}
 
- .nav-link:hover::after {
-     width: 100%;
- }
+@keyframes blink {
+    0% {
+        border-color: transparent;
+    }
 
- /* Hero Section */
- .hero {
-     height: 100vh;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
-     color: #ffadad;
-     background-attachment: fixed;
-     padding: 0 20px;
-     opacity: 0;
-     animation: fadeIn 3s forwards;
- }
+    50% {
+        border-color: #ffc600;
+    }
 
- @media (max-width: 768px) {
-     .right {
-         display: none;
-         flex-direction: column;
-         width: 100%;
-         margin-right: 46px !important;
-     }
+    100% {
+        border-color: transparent;
+    }
+}
 
-     .nav-link {
-         justify-content: center;
-     }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
 
-     .right.active {
-         display: flex;
-         justify-content: center;
-         /* Center items horizontally */
-     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-     .toggle-btn {
-         display: block;
-         position: absolute;
-         top: 45px;
-         /* Adjust to position the toggle button vertically */
-         right: 15px;
-         /* Adjust to position the toggle button horizontally */
-         background: none;
-         border: none;
-         color: purple;
-         font-size: 24px;
-         cursor: pointer;
-         z-index: 1000;
-         /* Ensure it stays on top of other elements */
-     }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
-     .left h1 {
-         font-size: 2rem;
-         /* Adjust the font size as needed */
-         margin-top: 15px;
-         /* Adjust the top margin to align the h1 element */
-         margin-left: 20px;
-         /* Adjust the left margin to align the h1 element */
-     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-     .section-skills {
-         padding: 20px 20px;
-         text-align: center;
-         margin: auto;
-         width: 290px !important;
-         opacity: 0;
-         animation: fadeInUp 1.5s forwards;
-         font-family: "Dancing Script", cursive;
-     }
- }
+/* About Section */
+.border-container-a {
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    height: 600px;
+}
 
- .hero span {
-     font-size: 4.5rem;
-     margin: 0;
-     background: linear-gradient(145deg, blue, rgba(173, 216, 230, 0.8), purple, #ff00b7);
-     -webkit-background-clip: text;
-     color: transparent;
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
- }
+#about {
+    width: 95%;
+    height: 92%;
+    position: relative;
+    color: #00ff75;
+    padding: 20px;
+    border-radius: 20px;
+    margin: auto;
+    background-color: #000;
+    transition: all 0.2s;
+}
 
- .hero h1 {
-     font-size: 4.5rem;
-     margin: 0;
-     background: linear-gradient(145deg, skyblue, blue);
-     -webkit-background-clip: text;
-     color: transparent;
- }
+#about h2 {
+    color: #ffadad;
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
 
- .hero h2 {
-     font-size: 2.5rem;
-     margin: 20px 0 0;
-     font-family: "Edu VIC WA NT Beginner", cursive;
-     white-space: nowrap;
-     color: #ffc600;
-     overflow: hidden;
-     border-right: 3px solid #ffc600;
-     width: 0;
-     animation: typing 4s steps(30, end) infinite, blink 0.75s step-end infinite;
- }
+#about div {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 2;
+    font-size: 18px;
+}
 
- /* Keyframes for Typing Effect */
- @keyframes typing {
-     from {
-         width: 0;
-     }
+/* Contact Section */
+.section-contact {
+    padding: 10px 10px;
+    margin-top: 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 134px;
+    width: 600px;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+    border: none;
+    font-family: "Oswald", sans-serif;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: transparent;
+    color: #ffffff;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+}
 
-     to {
-         width: 28%;
-     }
- }
+.section-contact h2 {
+    color: #ffadad;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
- /* Keyframes for Blink Effect */
- @keyframes blink {
-     0% {
-         border-color: transparent;
-     }
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
 
-     50% {
-         border-color: #ffc600;
-     }
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffc600;
+    text-decoration: none;
+    font-size: 2.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
-     100% {
-         border-color: transparent;
-     }
- }
+.social-link:hover {
+    color: #ffdd57;
+    transform: scale(1.15);
+}
 
- /* Keyframes for Fade In */
- @keyframes fadeIn {
-     from {
-         opacity: 0;
-         transform: translateY(-100px);
-     }
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    color: #f0f8ff;
+    background: rgba(0, 0, 0, 0.7);
+    font-family: "Oswald", sans-serif;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
 
-     to {
-         opacity: 1;
-         transform: translateY(0);
-     }
- }
+footer p {
+    margin: 0;
+}
 
- /* Keyframes for Fade In Up */
- @keyframes fadeInUp {
-     from {
-         opacity: 0;
-         transform: translateY(20px);
-     }
+span {
+    margin-left: 14px;
+}
 
-     to {
-         opacity: 1;
-         transform: translateY(0);
-     }
- }
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-right: 46px !important;
+    }
 
- /* About Section */
- /* About Section */
- .border-container-a {
-     background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
-     border-radius: 20px;
-     transition: all 0.3s;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 70%;
-     margin: auto;
-     height: 600px;
- }
+    .nav-link {
+        justify-content: center;
+    }
 
- #about {
-     width: 95%;
-     height: 92%;
-     position: relative;
-     /* Required for positioning the pseudo-elements */
-     color: #00ff75;
-     /* Black background for the #about section */
-     padding: 20px;
-     /* Add some padding to prevent text from touching the border */
-     border-radius: 10px;
-     margin: auto;
-     background-color: #000;
-     transition: all 0.2s;
-     border-radius: 20px;
-     /* Rounded corners */
+    .right.active {
+        display: flex;
+        justify-content: center;
+    }
 
-     /* To prevent pseudo-element overflow */
- }
+    .toggle-btn {
+        display: block;
+        position: absolute;
+        top: 53px;
+        right: 15px;
+        background: none;
+        border: none;
+        color: purple;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1000;
+    }
 
- #about h2 {
-     color: #ffadad;
-     text-align: center;
-     font-size: 3.5rem;
-     margin-bottom: 20px;
- }
+    .left h1 {
+        font-size: 2rem;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
 
- #about div {
-     max-width: 800px;
-     margin: 0 auto;
-     line-height: 2;
-     font-size: 18px;
- }
+    .section-skills {
+        padding: 20px 20px;
+        text-align: center;
+        margin: auto;
+        width: 290px !important;
+        opacity: 0;
+        animation: fadeInUp 1.5s forwards;
+        font-family: "Dancing Script", cursive;
+    }
 
+    .hero h2 {
 
+        /* Adjust font size for smaller screens */
+        width: 100%;
+        animation: typing 4s steps(30, end) infinite, blink 0.75s step-end infinite;
+        /* Adjust width to fit within mobile screens */
+    }
 
- /* Contact Section */
- .section-contact {
-     padding: 10px 10px;
-     margin-top: 20px;
-     text-align: center;
-     margin: auto;
-     margin-top: 134px;
-     width: 600px;
-     opacity: 0;
-     animation: fadeInUp 1.5s forwards;
-     border: none;
-     font-family: "Oswald", sans-serif;
-     border-radius: 15px;
-     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-     background: transparent;
-     color: #ffffff;
- }
+    @keyframes typing {
+        from {
+            width: 0;
+        }
 
- .section-contact h2 {
-     color: #ffadad;
-     font-size: 3.5rem;
-     margin-bottom: 20px;
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
- }
+        to {
+            width: 50%;
+        }
+    }
 
- .contact-links {
-     display: flex;
-     justify-content: center;
-     gap: 30px;
-     flex-wrap: wrap;
- }
+    @keyframes blink {
+        0% {
+            border-color: transparent;
+        }
 
- .social-link {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     color: #ffc600;
-     text-decoration: none;
-     font-size: 2.5rem;
-     transition: color 0.3s ease, transform 0.3s ease;
- }
+        50% {
+            border-color: #ffc600;
+        }
 
- .social-link:hover {
-     color: #ffdd57;
-     transform: scale(1.15);
- }
-
- /* Optional: Adding subtle transition to the section */
- .section-contact {
-     transition: background 0.5s ease, box-shadow 0.5s ease;
- }
-
- /* Footer */
- footer {
-     padding: 20px 0;
-     text-align: center;
-     color: #f0f8ff;
-     background: rgba(0, 0, 0, 0.7);
-     font-family: "Oswald", sans-serif;
-     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
- }
-
- footer p {
-     margin: 0;
- }
-
- span {
-     margin-left: 14px;
- }
+        100% {
+            border-color: transparent;
+        }
+    }
+}
