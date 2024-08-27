@@ -68,3 +68,4 @@ window.addEventListener("scroll", () => {
   // Move the scene down based on the scroll position
   scene.position.y = 0 - scrollY / 200;
 });
+
