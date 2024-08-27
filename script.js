@@ -20,7 +20,8 @@ scene.add(pointLight);
 
 // Function to create stars
 function addStar() {
-  const starGeometry = new THREE.SphereGeometry(0.1, 24, 24);
+  // Increase the star size by changing the radius from 0.05 to a larger value, e.g., 0.1
+  const starGeometry = new THREE.SphereGeometry(0.1, 24, 24); // Larger radius for slightly bigger stars
   const starMaterial = new THREE.MeshBasicMaterial({
     color: Math.random() * 0xffffff,
   });
@@ -33,8 +34,8 @@ function addStar() {
   scene.add(star);
 }
 
-// Add multiple stars
-Array(200).fill().forEach(addStar);
+// Add more stars
+Array(500).fill().forEach(addStar); // You can adjust this number as needed
 
 // Position the camera
 camera.position.z = 5;
