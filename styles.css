@@ -1,4 +1,4 @@
-/* Global Styles */
+* Global Styles */
 body {
     margin: 0;
     background: #000;
@@ -373,5 +373,4 @@ footer p {
 
 span {
     margin-left: 14px;
-} 
-
+}
